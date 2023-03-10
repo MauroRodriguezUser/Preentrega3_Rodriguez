@@ -1,0 +1,25 @@
+@for $i from 1 through 7 {
+     .nosotros-#{$i}{grid-area:"item-"+$i}
+}
+
+
+.imagenesnuestras{
+    display:grid;
+    grid-template-columns: repeat (2,fr);
+    grid-template-rows: repeat (5,55rem);
+    color: $color-letra;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    grid-template-areas: 
+    'item-1 item-1'
+    'item-2 item-2'
+    'item-3 item-4'
+    'item-5 item-6'
+    'item-7 item-7';
+    row-gap: 3rem;
+    column-gap: 3rem;
+         img {
+    height: 40rem;
+    width: 40rem;}}

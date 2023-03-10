@@ -1,0 +1,30 @@
+header, footer{
+    display: flex;
+    justify-content: space-between;
+    background-image: url("../Fotos/fondoheader.PNG");
+    height: 8rem;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    
+    h1{
+        color: $color-letra-nav ;
+        height: 3rem;
+        margin-left: 3rem;
+        animation-duration: 4s ;
+        animation-name: rotar;
+        animation-iteration-count: 2;
+        
+    
+    
+        @keyframes rotar {
+    
+            0%{rotate: 0deg;}
+            50%{rotate:180deg}
+            100%{rotate: 0deg}
+            
+        }
+        }}
+
+
+.saludo-final{ margin-left: 3rem; }

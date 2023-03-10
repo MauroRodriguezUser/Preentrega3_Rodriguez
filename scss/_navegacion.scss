@@ -1,0 +1,14 @@
+.navegacion {
+    flex-direction: row;
+    padding: 2rem;
+
+
+    a.href {
+        margin-right: 2rem;
+        text-decoration: none;
+        color: $color-letra-nav;
+
+        &:hover {
+            color: rgb(102, 209, 102);
+            background-color: black
+        }}}

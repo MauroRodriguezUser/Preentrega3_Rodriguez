@@ -1,0 +1,28 @@
+@for $sitio from 1 through 10 {
+    .home-#{$sitio}{grid-area: home+$sitio;}
+}
+
+
+.imageneshome{
+    margin: 0 1rem 0 1rem;
+    color:rgb(186, 215, 233);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    column-gap: 3rem;
+    row-gap: 3rem;
+    grid-template-columns: repeat(2,fr);
+    grid-template-rows: repeat(10,fr);
+    grid-template-areas: 
+    'home1 home1'
+    'home2 home2'
+    'home3 home4'
+    'home5 home5'
+    'home6 home7'
+    'home8 home8'
+    'home9 home10';
+         img {
+            height: 30rem;
+            width: 40rem;}}
