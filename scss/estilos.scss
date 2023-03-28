@@ -2,6 +2,13 @@ $fondo-color: rgb(24, 24, 35);
 $color-letra: rgb(186, 215, 233);
 $color-letra-nav: rgb(83, 127, 231);
 
+@mixin centrar {
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
 
 @import "color-fondo.scss";
 @import "header-y-footer.scss";
@@ -13,185 +20,127 @@ $color-letra-nav: rgb(83, 127, 231);
 @import "ventas.scss";
 @import "contacto.scss";
 
-
-.titulo{
-    color:  $color-letra;
+.titulo {
+    color: $color-letra;
     display: flex;
     justify-content: center;
     margin-top: 3rem;
-    font-size: 5rem;}
+    font-size: 5rem;
+}
 
 
-    @media (max-width: 1024px){
+@media (max-width: 1024px) {
 
-        .imagenesnuestras img{
-            width: 22rem;
-            height: 22rem;}
-        
-        .imagenes-redes{
-            height: 7rem;
-            width: 7rem;}
-        
-        .titulo{
-            font-size:4rem ;}
-        
-        .imagenes-redes{
-            height: 4rem;
-            width: 4rem;}
-            
-        .imageneshome img{
-                height: 25rem;
-                width: 25rem; 
+    .imagenesnuestras img {
+        width: 22rem;
+        height: 22rem;
+    }
+
+    .imagenes-redes {
+        height: 7rem;
+        width: 7rem;
+    }
+
+    .titulo {
+        font-size: 4rem;
+    }
+
+    .imagenes-redes {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .imageneshome img {
+        height: 25rem;
+        width: 25rem;
+    }
+
+    .videos-eventos video {
+        margin-top: 1rem;
+        height: 25rem;
+        width: 25rem;
+    }
+
+    .fotos-ventas img {
+        height: 26rem;
+        width: 26rem;
+    }
+
+    #imagencontacto {
+        margin-top: 3rem;
+        margin-left: 40rem;
+        margin-bottom: 1rem;
+        width: 22rem;
+        height: 22rem;
+        position: absolute;
+    }
+}
+
+
+
+@media (max-width: 768px){
+
+    .imagenesnuestras img {
+        height: 15rem;
+        width: 15rem;
+    }
+
+    .imagenes-redes {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .titulo {
+        font-size: 4rem
+    }
+
+    header,
+    footer {
+        justify-content: center;
+    }
+
+    .navegacion {
+        padding: 0;
+
+        a {
+            margin: 0;
+            padding: 0;
+            font-size: small;
         }
-        .videos-eventos video{
-                margin-top: 1rem;
-                height: 25rem;
-                width: 25rem;    }
-        
-        .fotos-ventas img{
-            height: 26rem;
-            width: 26rem;}
-        
-        #imagencontacto{
-                margin-top: 3rem;
-                margin-left: 40rem;
-                margin-bottom: 1rem;
-                width: 22rem;
-                height: 22rem;
-                position: absolute;}}
-        
-        
+    }
 
-    @media (max-width: 768px){
+    header h1 {
+        height: 1rem;
+        margin-left: 0rem;
+        margin-top: 3rem;
+    }
 
-        .imagenesnuestras img{
-                height: 15rem;
-                width: 15rem;}
-        
-        .imagenes-redes{
-                height: 5rem;
-                width: 5rem; }
-            
-        .titulo{font-size: 4rem }    
-    
-        header, footer{justify-content: center; }
-    
-        .navegacion{
-                padding: 0; 
-    
-                a{
-                    margin: 0;
-                    padding: 0;
-                    font-size: small;}}
-                    
-        header h1{
-                height: 1rem;
-                margin-left: 0rem;
-                margin-top: 3rem;}
-        
-        .saludo-final{
-                margin-left: 1rem;
-                margin-top: 2rem;}   
-        
-    
-        .imageneshome img{
-            height: 22rem;
-            width: 22rem;    }   
-    
-           
-        .videos-eventos{
+    .saludo-final {
+        margin-left: 1rem;
+        margin-top: 2rem;
+    }
+
+
+    .imageneshome img {
+        height: 22rem;
+        width: 22rem;
+    }
+
+
+    .videos-eventos {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-content: center;
-        align-items: center;
-        justify-items: center;
-        justify-content: center;
-        
-            video {
+        @include centrar;
+
+        video {
             margin-top: 1rem;
             height: 25rem;
-            width: 25rem;}}
-            
-        .fotos-ventas {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-content: center;
-            align-items: center;
-            justify-items: center;
-            justify-content: center;
-                 img {
-                height: 24rem;
-                width: 24rem;}}
-    
-         #imagencontacto{
-            margin-left: 8rem;
-            margin-bottom: 1rem;
             width: 25rem;
-            position: relative;}
-    
-        .imagenesnuestras p{
-            text-align: center;
-            
-                section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-content: center;
-            justify-items: center;
-            align-items: center;}}
         }
-    
+    }
 
-
-
-    @media (max-width: 425px){
-    
-        .titulo{font-size: 2rem; }
-        
-        
-        .imagenesnuestras {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-content: center;
-            align-items: center;
-            justify-items: center;
-            justify-content: center;}
-                     
-            p {text-align: center;}
-                    
-            section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-content: center;
-            justify-items: center;
-            align-items: center; }
-        
-            img {
-            align-self: center;
-            justify-self: center;
-            height: 10rem;
-            width: 10rem;
-            }
-    
-        .imagenes-redes{
-            height: 3rem;
-            width: 3rem; }
-    
-        header, footer{
-            height: 15rem;
-            justify-content: center; }
-        
-        .navegacion{
-            display: flex;
-            flex-direction: column;
-            
-            a {margin-top: 1rem;}}
-    
-        .imageneshome{
+    .fotos-ventas {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -199,12 +148,108 @@ $color-letra-nav: rgb(83, 127, 231);
         align-items: center;
         justify-items: center;
         justify-content: center;
-        
-            img {
+
+        img {
+            height: 24rem;
+            width: 24rem;
+        }
+    }
+
+    #imagencontacto {
+        margin-left: 8rem;
+        margin-bottom: 1rem;
+        width: 25rem;
+        position: relative;
+    }
+
+    .imagenesnuestras p {
+        text-align: center;
+
+        section {
+            display: flex;
+            flex-direction: column;
+            @include centrar;
+        }
+    }
+}
+
+
+
+
+@media only screen and (min-width: 300px) and (max-width: 480px) {
+
+    .titulo {
+        font-size: 2rem;
+    }
+
+
+    .imagenesnuestras {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+
+    img {
+        align-self: center;
+        justify-self: center;
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .imagenes-redes {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    header,
+    footer {
+        height: 15rem;
+        justify-content: center;
+    }
+
+    .navegacion {
+        display: flex;
+        flex-direction: column;
+
+        a {
+            margin-top: 1rem;
+        }
+    }
+
+    .imageneshome {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+
+        img {
             height: 18rem;
-            width: 18rem; ;}}
-        
-        .videos-eventos{
+            width: 18rem;
+            ;
+        }
+    }
+
+    .videos-eventos {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -212,40 +257,39 @@ $color-letra-nav: rgb(83, 127, 231);
         align-items: center;
         justify-items: center;
         justify-content: center;
-    
-          video {
+
+        video {
             margin-top: 2rem;
             height: 18rem;
-            width: 18rem;}}
-    
-        .fotos-ventas {
-         display: flex;
+            width: 18rem;
+        }
+    }
+
+    .fotos-ventas {
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: center;
         align-items: center;
         justify-items: center;
         justify-content: center;
-    
-            img{
+
+        img {
             height: 15rem;
-            width: 15rem;}}
-    
-        #imagencontacto{
-            margin-left: 2rem;
-            margin-bottom: 1rem;
-            width: 16rem;
-            height: 16rem;
-            position: relative;}
-    
-        #texto-contacto{
-            max-width: 310px;
-            margin-left: 4px;
+            width: 15rem;
         }
-        }
+    }
 
+    #imagencontacto {
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        width: 16rem;
+        height: 16rem;
+        position: relative;
+    }
 
-
-
-
-
+    #texto-contacto {
+        max-width: 310px;
+        margin-left: 4px;
+    }
+}

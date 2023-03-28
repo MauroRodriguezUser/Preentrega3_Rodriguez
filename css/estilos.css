@@ -12,20 +12,26 @@ header, footer {
   font-family: sans-serif;
   font-weight: bold;
 }
-header h1, footer h1 {
+header h1, header h2, footer h1, footer h2 {
   color: rgb(83, 127, 231);
   height: 3rem;
   margin-left: 3rem;
-  animation-duration: 4s;
+  animation-duration: 6s;
   animation-name: rotar;
-  animation-iteration-count: 2;
+  animation-iteration-count: 1;
 }
 @keyframes rotar {
   0% {
     rotate: 0deg;
   }
+  25% {
+    rotate: 90deg;
+  }
   50% {
     rotate: 180deg;
+  }
+  75% {
+    rotate: 90deg;
   }
   100% {
     rotate: 0deg;
@@ -46,7 +52,7 @@ header h1, footer h1 {
   color: rgb(83, 127, 231);
 }
 .navegacion a.href:hover {
-  color: rgb(102, 209, 102);
+  color: white;
   background-color: black;
 }
 
@@ -116,9 +122,9 @@ a {
   margin: 0 1rem 0 1rem;
   color: rgb(186, 215, 233);
   display: grid;
-  align-items: center;
   justify-content: center;
   justify-items: center;
+  align-items: center;
   align-content: center;
   column-gap: 3rem;
   row-gap: 3rem;
@@ -221,9 +227,9 @@ a {
   grid-template-columns: repeat 2, fr;
   grid-template-rows: repeat 5, 55rem;
   color: rgb(186, 215, 233);
-  align-items: center;
-  justify-items: center;
   justify-content: center;
+  justify-items: center;
+  align-items: center;
   align-content: center;
   grid-template-areas: "item-1 item-1" "item-2 item-2" "item-3 item-4" "item-5 item-6" "item-7 item-7";
   row-gap: 3rem;
@@ -283,7 +289,7 @@ a {
 }
 
 label:hover {
-  transform: translate(15px);
+  transform: translate(10px);
 }
 
 button:hover {
@@ -353,7 +359,8 @@ button:hover {
   .titulo {
     font-size: 4rem;
   }
-  header, footer {
+  header,
+  footer {
     justify-content: center;
   }
   .navegacion {
@@ -381,10 +388,10 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
-    align-items: center;
-    justify-items: center;
     justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
   }
   .videos-eventos video {
     margin-top: 1rem;
@@ -417,12 +424,12 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
     justify-items: center;
     align-items: center;
+    align-content: center;
   }
 }
-@media (max-width: 425px) {
+@media only screen and (min-width: 300px) and (max-width: 480px) {
   .titulo {
     font-size: 2rem;
   }
@@ -456,7 +463,8 @@ button:hover {
     height: 3rem;
     width: 3rem;
   }
-  header, footer {
+  header,
+  footer {
     height: 15rem;
     justify-content: center;
   }

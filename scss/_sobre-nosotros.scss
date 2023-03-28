@@ -8,10 +8,7 @@
     grid-template-columns: repeat (2,fr);
     grid-template-rows: repeat (5,55rem);
     color: $color-letra;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    align-content: center;
+    @include centrar;
     grid-template-areas: 
     'item-1 item-1'
     'item-2 item-2'

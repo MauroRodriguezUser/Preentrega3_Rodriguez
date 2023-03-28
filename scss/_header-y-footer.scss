@@ -7,20 +7,24 @@ header, footer{
     font-family: sans-serif;
     font-weight: bold;
     
-    h1{
+    h1, h2{
         color: $color-letra-nav ;
         height: 3rem;
         margin-left: 3rem;
-        animation-duration: 4s ;
+        animation-duration: 6s ;
         animation-name: rotar;
-        animation-iteration-count: 2;
+        animation-iteration-count: 1;
         
+    
+
     
     
         @keyframes rotar {
     
             0%{rotate: 0deg;}
+            25%{rotate: 90deg}
             50%{rotate:180deg}
+            75%{rotate: 90deg}
             100%{rotate: 0deg}
             
         }
